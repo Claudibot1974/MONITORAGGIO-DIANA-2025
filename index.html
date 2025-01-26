@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana Goals 2025 - Project Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Diana Goals 2025</h1>
+            <div class="actions">
+                <button id="generateReport" class="btn"><i class="fas fa-file-export"></i> Generate Report</button>
+                <button id="saveState" class="btn"><i class="fas fa-save"></i> Save State</button>
+                <button id="loadState" class="btn"><i class="fas fa-folder-open"></i> Load State</button>
+                <button id="addStream" class="btn"><i class="fas fa-plus"></i> Add New Stream</button>
+            </div>
+        </header>
+
+        <main id="projectStreams">
+            <!-- Project streams will be dynamically inserted here -->
+        </main>
+    </div>
+
+    <!-- Modal for adding/editing notes -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add/Edit Note</h2>
+            <textarea id="noteText"></textarea>
+            <button id="saveNote" class="btn">Save Note</button>
+        </div>
+    </div>
+
+    <!-- Modal for reporting issues -->
+    <div id="issueModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Report Issue</h2>
+            <textarea id="issueText"></textarea>
+            <button id="saveIssue" class="btn">Save Issue</button>
+        </div>
+    </div>
+
+    <!-- Modal for adding new stream -->
+    <div id="streamModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Stream</h2>
+            <input type="text" id="streamName" placeholder="Stream Name">
+            <select id="streamEndQuarter">
+                <option value="">Select End Quarter</option>
+                <!-- Quarters will be dynamically added -->
+            </select>
+            <button id="saveStream" class="btn">Add Stream</button>
+        </div>
+    </div>
+
+    <!-- Modal for adding new activity -->
+    <div id="activityModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Activity</h2>
+            <input type="text" id="activityName" placeholder="Activity Name">
+            <select id="activityEndQuarter">
+                <option value="">Select End Quarter</option>
+                <!-- Quarters will be dynamically added -->
+            </select>
+            <button id="saveActivity" class="btn">Add Activity</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
